@@ -6,6 +6,7 @@ var app = angular.module("app",['ngNewRouter', 'app.add','app.home','app.main','
 
 app.controller('AppController',function($router,$location){
     $router.config([
+
         {path: "/", component:"main"},
         {path: "/home", component:"home"},
         {path: "/add", component:"add"},

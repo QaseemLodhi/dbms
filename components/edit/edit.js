@@ -16,6 +16,7 @@ function EditController($routeParams, $firebaseObject, $location) {
     this.list.$loaded()
         .then(
         function () {
+
             $scope.first = $scope.list.first;
             $scope.last = $scope.list.last;
             $scope.phone = $scope.list.phone;
@@ -24,6 +25,7 @@ function EditController($routeParams, $firebaseObject, $location) {
 
     $scope.update = function () {
         ref.child(this.id).set({
+
             first: $scope.first,
             last: $scope.last,
             phone: $scope.phone,
