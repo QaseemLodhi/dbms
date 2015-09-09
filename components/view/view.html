@@ -1,0 +1,60 @@
+<style>
+    td,th{
+        width: 15rem;
+        height: 2rem;
+        border: 3px solid blue;
+        text-align: center;
+    }
+    th{
+        background:orangered;
+        border-color:blue ;
+        border-width: 3px;
+    }
+    body{
+        padding: 1rem;
+    }
+    md-card{
+        border-color: brown;
+    }
+
+</style>
+
+<md-card class="card">
+    <md-toolbar class="md-w" >
+        <div class="md-toolbar-tools" layout-align="center center" >
+            <h1 class="md-flex" >DataBase Management System</h1>
+        </div>
+    </md-toolbar>
+
+
+    <md-card-content>
+
+        <div  layout="row" layout-align="center center">
+            <md-button class="md-raised md-primary" ng-link="add">Add</md-button>
+            <md-button class="md-raised md-warn" ng-link="view">View</md-button>
+        </div>
+        <table>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Action</th>
+
+            <tr ng-repeat="data in view.list">
+                <td>{{data.first}}</td>
+                <td>{{data.last}}</td>
+                <td>{{data.phone}}</td>
+                <td>{{data.email}}</td>
+
+                <td>
+                    <md-button class="md-raised md-primary" ng-click="view.remove($index)">Delete</md-button>
+                    <md-button class="md-raised md-warn" ng-click="view.update(data.$id)" >Edit</md-button>
+                </td>
+
+
+
+            </tr>
+        </table>
+    </md-card-content>
+</md-card>

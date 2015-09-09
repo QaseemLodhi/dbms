@@ -1,0 +1,54 @@
+<style>
+
+    h1 {
+
+        text-align: center;
+        font-size: 100px;
+
+    }
+
+    .md-w {
+        width: 1450px;
+    }
+
+    md-card {
+        border-radius: 30px;
+        width: 500px;
+    }
+
+    md-content {
+        border-radius: 30px;
+    }
+
+</style>
+<div layout="column" layout-align="center center" style="margin-top: 30px">
+    <md-toolbar class="md-w">
+        <div class="md-toolbar-tools" layout-align="center center">
+            <h1 class="md-flex">DataBase Management System</h1>
+        </div>
+    </md-toolbar>
+
+    <md-card>
+
+        <md-content layout-padding="" layout="column" layout-sm="row" style="" class="md-default-theme">
+
+            <md-input-container class="md-default-theme">
+                <label for="input_0">Email</label>
+                <input ng-model="user.title" id="input_0">
+            </md-input-container>
+            <md-input-container class="md-default-theme">
+                <label for="input_1">Password</label>
+                <input ng-model="user.email" id="input_1">
+            </md-input-container>
+
+            <div layout="row" layout-align="center center">
+                <button class="md-raised md-primary md-button md-default-theme"
+                        ng-click="main.login()" tabindex="0" ng-link="home"><span
+                        class="ng-scope">Login With Facebook</span>
+
+                    <div class="md-ripple-container"></div>
+                </button>
+            </div>
+        </md-content>
+    </md-card>
+</div>

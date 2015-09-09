@@ -1,0 +1,40 @@
+<style>
+    .md-w{
+        width: 1450px;
+    }
+</style>
+<div   layout="column" layout-align="center center" style="margin-top: 20px">
+    <md-toolbar class="md-w" >
+        <div class="md-toolbar-tools" layout-align="center center" >
+            <h1 class="md-flex" >DataBase Management System</h1>
+        </div>
+    </md-toolbar>
+    <div layout="row" layout-align="center center">
+    <md-button class="md-raised md-primary" ng-link="add">Add</md-button>
+    <md-button class="md-raised md-warn" ng-link="view">View</md-button>
+    </div>
+    <md-card style ="width: 550px; height: 350px">
+        <md-card-content >
+            <md-input-container class="md-float" >
+
+                <label>First Name</label>
+
+                <input ng-model="add.first" type="text">
+            </md-input-container>
+            <md-input-container class="md-float" >
+
+                <label>Last Name</label>
+
+                <input ng-model="add.last" type="text">
+            </md-input-container>
+            <md-input-container md-no-float>
+                 <input ng-model="add.phone" type="text" placeholder="Phone Number">
+            </md-input-container>
+            <md-input-container class="md-no-float" >
+                <label>Email</label>
+                 <input ng-model="add.email" type="email" ng-required="true">
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="add.add()">Submit</md-button>
+        </md-card-content>
+    </md-card>
+</div>
